@@ -408,14 +408,16 @@
 
         /* Skills Section */
         .skills-grid {
-            display: flex;
-            margin: 0 4rem;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            flex-direction: column;
+                display: flex;
+                margin: 0 4rem;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+                flex-direction: row;
+                flex-wrap: wrap;
         }
 
         .skill-card {
+            width: 48%;
             padding: 1rem;
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
@@ -788,7 +790,7 @@
                 <div class="container">
                     <div class="section-header"><h2>About Me</h2></div>
                     <div class="card">
-                        <img src="./img/about.jpeg" alt="Profile">
+<!--                         <img src="./img/about.jpeg" alt="Profile"> -->
                         <div>
                             <p>
                                 Hey, I am Jannatul Ferdous Mitu. I’m a B.Sc. in Computer Science and Engineering student currently in my 7th semester at the University of Global Village (UGV). My primary interests lie in the fields of cybersecurity and computer networking, where I’m actively building my knowledge and practical skills to pursue a career in securing digital systems and infrastructure.
@@ -832,7 +834,7 @@
                             <div class="progress-bar">
                                 <div class="progress" style="width: 95%;"></div>
                             </div>
-                            <span class="percentage">90%</span>
+                            <span class="percentage">95%</span>
                         </div>
                         <div class="skill-card">
                             <h5>Bootstrap</h5>
@@ -840,6 +842,13 @@
                                 <div class="progress" style="width: 60%;"></div>
                             </div>
                             <span class="percentage">60%</span>
+                        </div>
+                        <div class="skill-card">
+                            <h5>MYSQL</h5>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                            <span class="percentage">80%</span>
                         </div>
                     </div>
                 </div>
@@ -897,7 +906,7 @@
                 </div>
             </section>
 
-            <section id="achievements" class="section">
+<!--             <section id="achievements" class="section">
                 <div class="container">
                     <div class="section-header"><h2>Achievements</h2></div>
                     <div class="achievements-grid sectiopadding">
@@ -915,7 +924,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section id="contact" class="section bg-light">
                 <div class="container">
