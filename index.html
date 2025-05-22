@@ -13,23 +13,23 @@
 
     <style>
         :root {
-  /* Base Colors */
-  --primary: #1E293B;                /* Deep navy slate - foundational brand tone */
-  --secondary: #F4A261;              /* Soft orange coral - modern, warm contrast */
-  --neutral: #F9FAFB;                /* Lightest neutral for backgrounds */
-  --dark-gray: #334155;              /* Muted dark slate for structure, borders, text */
+          /* Base Colors */
+          --primary: #1E293B;                /* Deep navy slate - foundational brand tone */
+          --secondary: #F4A261;              /* Soft orange coral - modern, warm contrast */
+          --neutral: #F9FAFB;                /* Lightest neutral for backgrounds */
+          --dark-gray: #334155;              /* Muted dark slate for structure, borders, text */
 
-  /* Accent & Highlight */
-  --accent: #4BC0C8;                 /* Soft teal-cyan - fresh, modern accent */
+          /* Accent & Highlight */
+          --accent: #4BC0C8;                 /* Soft teal-cyan - fresh, modern accent */
 
-  /* Buttons: Primary Actions */
-  --button-blue: #2563EB;            /* Primary CTA (Blue) */
-  --button-blue-hover: #1E40AF;      /* Darker on hover for depth */
+          /* Buttons: Primary Actions */
+          --button-blue: #2563EB;            /* Primary CTA (Blue) */
+          --button-blue-hover: #1E40AF;      /* Darker on hover for depth */
 
-  /* Buttons: Secondary Actions */
-  --button-blue-secondary: #3B82F6;  /* Lighter variant for alt actions */
-  --button-blue-secondary-hover: #1D4ED8; /* Dark hover for contrast */
-}
+          /* Buttons: Secondary Actions */
+          --button-blue-secondary: #3B82F6;  /* Lighter variant for alt actions */
+          --button-blue-secondary-hover: #1D4ED8; /* Dark hover for contrast */
+        }
 
         * {
             margin: 0;
@@ -412,12 +412,10 @@
             margin: 0 4rem;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-direction: column;
         }
 
         .skill-card {
-            width: 45%;
             padding: 1rem;
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
@@ -642,11 +640,12 @@
         }
 
         #contact .social-side {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-start;
+                text-align: center;
+                flex-wrap: nowrap;
         }
 
         #contact .social-side h3 {
@@ -668,6 +667,31 @@
 
         #contact .social-links a:hover {
             color: var(--accent);
+        }
+
+        #contact .contact-info {
+            
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 1rem;
+            color: var(--dark-gray);
+        }
+
+        #contact .contact-info a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #contact .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        #contact .contact-info i {
+            font-size: 1.2rem;
         }
 
         /* Footer */
@@ -764,10 +788,10 @@
                 <div class="container">
                     <div class="section-header"><h2>About Me</h2></div>
                     <div class="card">
-                        <img src="./img/about" alt="Profile">
+                        <img src="./img/about.jpeg" alt="Profile">
                         <div>
                             <p>
-                                Hey, I am Jannatul Ferdous Mitu. I’m a B.Sc. in Computer Science and Engineering student currently in my 7th semester at the University of Global Village (UGV), Barishal. My primary interests lie in the fields of cybersecurity and computer networking, where I’m actively building my knowledge and practical skills to pursue a career in securing digital systems and infrastructure.
+                                Hey, I am Jannatul Ferdous Mitu. I’m a B.Sc. in Computer Science and Engineering student currently in my 7th semester at the University of Global Village (UGV). My primary interests lie in the fields of cybersecurity and computer networking, where I’m actively building my knowledge and practical skills to pursue a career in securing digital systems and infrastructure.
                             </p>
                             <p>
                                 Outside academics, I enjoy reading books to expand my knowledge and perspective.
@@ -817,13 +841,6 @@
                             </div>
                             <span class="percentage">60%</span>
                         </div>
-                        <div class="skill-card">
-                            <h5>MySQL</h5>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 70%;"></div>
-                            </div>
-                            <span class="percentage">70%</span>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -836,7 +853,7 @@
                             <div class="card">
                                 <div class="education-item">
                                     <h4>B.Sc. in Computer Science and Engineering</h4>
-                                    <p class="text-muted">University of Global Village (UGV) | Barishal,Bangladesh | 2022 - Present</p>
+                                    <p class="text-muted">University of Global Village (UGV) | Bangladesh | 2021 - Present</p>
                                     <ul>
                                         <li>Currently in 7th semester, focusing on cybersecurity and computer networking</li>
                                         <li>Relevant Coursework: Web Development, UI/UX Design, Networking</li>
@@ -880,7 +897,7 @@
                 </div>
             </section>
 
-<!--             <section id="achievements" class="section">
+            <section id="achievements" class="section">
                 <div class="container">
                     <div class="section-header"><h2>Achievements</h2></div>
                     <div class="achievements-grid sectiopadding">
@@ -898,12 +915,26 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <section id="contact" class="section bg-light">
                 <div class="container">
                     <div class="section-header"><h2>Contact Me</h2></div>
                     <div class="card sectiopadding">
+                        <div class="social-side">
+                            <h3>Connect with Me</h3>
+                            <div class="contact-info">
+                                <a href="mailto:j.ferdous2125@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> j.ferdous2125@gmail.com</a>
+                            </div>
+                            <div class="contact-info">
+                                <a href="tel:+1234567890" aria-label="Phone"><i class="fas fa-phone"></i> +1234567890</a>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://linkedin.com/in/janedoe" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/janedoe" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://twitter.com/janedoe" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
                         <div class="form-side">
                             <form id="contact-form">
                                 <div class="form-group">
@@ -921,14 +952,7 @@
                                 <button type="submit" class="btn"><span>Send Message</span></button>
                             </form>
                         </div>
-                        <div class="social-side">
-                            <h3>Connect with Me</h3>
-                            <div class="social-links">
-                                <a href="https://linkedin.com/in/janedoe" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://github.com/janedoe" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="https://twitter.com/janedoe" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </section>
